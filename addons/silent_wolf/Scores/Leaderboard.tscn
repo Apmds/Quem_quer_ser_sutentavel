@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/silent_wolf/Scores/Leaderboard.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/Questions_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://addons/silent_wolf/common/SWButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Fonts/komika.hand.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=4]
+size = 58
+outline_size = 2
+outline_color = Color( 0.0627451, 0.639216, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=3]
+
+[sub_resource type="DynamicFont" id=5]
+size = 55
+outline_size = 2
+outline_color = Color( 0.682353, 0.439216, 0.0666667, 1 )
+font_data = ExtResource( 5 )
+
+[node name="Leaderboard" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_left = -1561.0
+margin_right = 2836.0
+margin_bottom = 720.0
+color = Color( 0.0705882, 0.411765, 0.576471, 1 )
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+current = true
+
+[node name="OldBoard" type="MarginContainer" parent="."]
+visible = false
+margin_left = 50.0
+margin_right = 50.0
+margin_bottom = 40.0
+
+[node name="HighScores" type="TextureRect" parent="OldBoard"]
+margin_bottom = 40.0
+
+[node name="Board" type="VBoxContainer" parent="."]
+margin_left = -296.0
+margin_top = 25.0
+margin_right = 1568.0
+margin_bottom = 1076.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TitleContainer" type="CenterContainer" parent="Board"]
+margin_right = 1864.0
+margin_bottom = 80.0
+
+[node name="Label" type="Label" parent="Board/TitleContainer"]
+margin_left = 640.0
+margin_right = 1223.0
+margin_bottom = 80.0
+custom_colors/font_color = Color( 0.0470588, 0.976471, 0.278431, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Painel de líderes"
+
+[node name="MessageContainer" type="CenterContainer" parent="Board"]
+visible = false
+margin_top = 80.0
+margin_right = 1864.0
+margin_bottom = 111.0
+
+[node name="TextMessage" type="Label" parent="Board/MessageContainer"]
+margin_left = 806.0
+margin_right = 1058.0
+margin_bottom = 31.0
+custom_fonts/font = ExtResource( 3 )
+text = "A carregar o painel..."
+valign = 1
+
+[node name="HighScores" type="CenterContainer" parent="Board"]
+margin_top = 80.0
+margin_right = 1864.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 100 )
+theme = SubResource( 3 )
+
+[node name="ScoreItemContainer" type="VBoxContainer" parent="Board/HighScores"]
+margin_left = 932.0
+margin_top = 50.0
+margin_right = 932.0
+margin_bottom = 50.0
+
+[node name="CloseButtonContainer" type="CenterContainer" parent="Board"]
+margin_top = 180.0
+margin_right = 1864.0
+margin_bottom = 296.0
+
+[node name="CloseButton" parent="Board/CloseButtonContainer" instance=ExtResource( 4 )]
+margin_left = 618.0
+margin_right = 1245.0
+margin_bottom = 116.0
+custom_colors/font_color_disabled = Color( 0.929412, 0.65098, 0.12549, 1 )
+custom_colors/font_color_focus = Color( 0.929412, 0.65098, 0.12549, 1 )
+custom_colors/font_color = Color( 0.929412, 0.65098, 0.12549, 1 )
+custom_colors/font_color_hover = Color( 0.929412, 0.65098, 0.12549, 1 )
+custom_colors/font_color_pressed = Color( 0.929412, 0.65098, 0.12549, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Voltar para o menu"
+
+[connection signal="pressed" from="Board/CloseButtonContainer/CloseButton" to="." method="_on_CloseButton_pressed"]

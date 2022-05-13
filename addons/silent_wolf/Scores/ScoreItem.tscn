@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/silent_wolf/assets/fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.509804, 0.509804, 0.509804, 1 )
+border_blend = true
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="ScoreItem" type="Panel"]
+margin_right = 782.0
+margin_bottom = 58.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 782, 58 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="PlayerName" type="RichTextLabel" parent="."]
+margin_left = 22.0
+margin_top = 12.449
+margin_right = 589.0
+margin_bottom = 67.449
+custom_fonts/normal_font = SubResource( 2 )
+text = "1. Godzilla"
+
+[node name="Score" type="Label" parent="."]
+margin_left = 671.0
+margin_top = 9.0
+margin_right = 756.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 3 )
+text = "13"
+align = 2
+valign = 1

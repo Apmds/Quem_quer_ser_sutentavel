@@ -1,0 +1,447 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Assets/Fonts/Bangers.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/Buttons_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/Main_menu.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Buttons/Menu_button.tres" type="StyleBox" id=4]
+[ext_resource path="res://Assets/Fonts/komika.hand.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Buttons/Menu_button_pressed.tres" type="StyleBox" id=6]
+[ext_resource path="res://Assets/Buttons/Menu_button_hover.tres" type="StyleBox" id=7]
+[ext_resource path="res://Assets/Buttons/Portugal_flag.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Buttons/UK_flag.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Fonts/Questions_font.tres" type="DynamicFont" id=10]
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0627451, 0.486275, 0.690196, 1 )
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color( 0.0588235, 0.392157, 0.552941, 1 )
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=1]
+size = 110
+outline_size = 6
+outline_color = Color( 0.0392157, 0.32549, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 41
+outline_size = 2
+outline_color = Color( 0.682353, 0.439216, 0.0666667, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 48
+outline_size = 2
+outline_color = Color( 0.682353, 0.439216, 0.0666667, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.0431373, 0.627451, 0.682353, 1 )
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color( 0.0235294, 0.435294, 0.47451, 1 )
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=15]
+size = 65
+outline_size = 2
+outline_color = Color( 0.0627451, 0.639216, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=12]
+resource_name = "Defenitions_close"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Defenitions_BG:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Defenitions_BG:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Play_button:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Leaderboards_button:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Bug_report_button:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Defenitions_button:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "Defenitions_open"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Defenitions_BG:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Defenitions_BG:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Play_button:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Leaderboards_button:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Bug_report_button:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Defenitions_button:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Intro"
+
+[sub_resource type="Animation" id=5]
+resource_name = "Normal"
+loop = true
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Title:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 220, -0.15, 0, 0.15, 0, 328, -0.15, 0, 0.15, 0, 220, -0.15, 0, 0.15, 0, 274, -0.25, 0, 0.25, 0, 274, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1, 3, 3.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Title:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 60, -0.07, 0, 0.07, 0, 25, -0.07, 0, 0.07, 0, 60, -0.07, 0, 0.07, 0, 25, -0.07, 0, 0.07, 0, 60, -0.07, 0, 0.07, 0, 40, -0.25, 0, 0.25, 0, 40, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.005, 0.25, 0.5, 0.75, 1, 2.9, 3.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Title:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -10, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0, -10, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1, 2.8, 3.5 )
+}
+
+[node name="Main_menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_left = -980.0
+margin_right = 2232.0
+margin_bottom = 720.0
+color = Color( 0.101961, 0.619608, 0.870588, 1 )
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+current = true
+
+[node name="Menu_buttons_BG" type="Panel" parent="."]
+margin_left = 66.0
+margin_top = 314.0
+margin_right = 1212.0
+margin_bottom = 692.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 220.0
+margin_top = 60.0
+margin_right = 952.0
+margin_bottom = 319.0
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 366, 129 )
+custom_colors/font_color = Color( 0.564706, 0.964706, 0.0862745, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Quem quer
+ser sustentável?"
+align = 1
+valign = 1
+
+[node name="Play_button" type="Button" parent="."]
+margin_left = 459.0
+margin_top = 354.0
+margin_right = 821.0
+margin_bottom = 486.0
+custom_colors/font_color_disabled = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_focus = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_hover = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_pressed = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+text = "Jogar"
+
+[node name="Leaderboards_button" type="Button" parent="."]
+margin_left = 458.0
+margin_top = 514.0
+margin_right = 820.0
+margin_bottom = 646.0
+custom_colors/font_color_disabled = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_focus = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_hover = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_pressed = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+text = "Rankings"
+
+[node name="Bug_report_button" type="Button" parent="."]
+margin_left = 839.0
+margin_top = 434.0
+margin_right = 1168.0
+margin_bottom = 558.0
+custom_colors/font_color_disabled = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_focus = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_hover = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_pressed = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_fonts/font = SubResource( 11 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+text = "Reportar bug"
+
+[node name="Defenitions_button" type="Button" parent="."]
+margin_left = 99.0
+margin_top = 434.0
+margin_right = 444.0
+margin_bottom = 558.0
+custom_colors/font_color_disabled = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_focus = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_hover = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_pressed = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_fonts/font = SubResource( 10 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+text = "Definições"
+
+[node name="Defenitions_BG" type="Panel" parent="."]
+visible = false
+margin_left = 166.0
+margin_top = 45.0
+margin_right = 1114.0
+margin_bottom = 631.0
+rect_pivot_offset = Vector2( 474, 293 )
+custom_styles/panel = SubResource( 14 )
+
+[node name="Title" type="Label" parent="Defenitions_BG"]
+margin_left = 230.0
+margin_top = 34.0
+margin_right = 718.0
+margin_bottom = 192.0
+custom_colors/font_color = Color( 0.0470588, 0.976471, 0.278431, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Definições"
+align = 1
+valign = 1
+
+[node name="Back_button" type="Button" parent="Defenitions_BG"]
+margin_left = 272.0
+margin_top = 400.0
+margin_right = 677.0
+margin_bottom = 520.0
+custom_colors/font_color_disabled = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_focus = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_hover = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_colors/font_color_pressed = Color( 0.976471, 0.631373, 0.137255, 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/normal = ExtResource( 4 )
+text = "Voltar"
+
+[node name="Flags" type="HBoxContainer" parent="Defenitions_BG"]
+visible = false
+margin_top = 230.0
+margin_right = 946.0
+margin_bottom = 310.0
+custom_constants/separation = 111
+alignment = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Portugal_button" type="TextureButton" parent="Defenitions_BG/Flags"]
+margin_left = 297.0
+margin_right = 417.0
+margin_bottom = 80.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
+
+[node name="Uk_button" type="TextureButton" parent="Defenitions_BG/Flags"]
+margin_left = 528.0
+margin_right = 648.0
+margin_bottom = 80.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 9 )
+texture_focused = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Defenitions_BG"]
+margin_left = 2.0
+margin_top = 192.0
+margin_right = 952.0
+margin_bottom = 316.0
+custom_fonts/font = ExtResource( 10 )
+text = "Ainda não está nada aqui..."
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+anims/Defenitions_close = SubResource( 12 )
+anims/Defenitions_open = SubResource( 13 )
+anims/Intro = SubResource( 4 )
+anims/Normal = SubResource( 5 )
+
+[connection signal="pressed" from="Play_button" to="." method="_on_Play_button_pressed"]
+[connection signal="pressed" from="Leaderboards_button" to="." method="_on_Rankings_button_pressed"]
+[connection signal="pressed" from="Bug_report_button" to="." method="_on_Bug_report_button_pressed"]
+[connection signal="pressed" from="Defenitions_button" to="." method="_on_Defenitions_button_pressed"]
+[connection signal="pressed" from="Defenitions_BG/Back_button" to="." method="_on_Back_button_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

@@ -1,0 +1,15 @@
+{"Verdadeiro ou falso: Uma laranja saudável é azul.": ["2_respostas", 1, "Falso", "Verdadeiro"],
+"Em que ano chegou Vasco da Gama à Índia?": ["3_respostas", 3, "1500", "1499", "1498"],
+"Quem foi o primeiro rei de Portugal?": ["4_respostas", 2, "D.João Mota", "D.Afonso Henriques", "D.Dinis", "D.Henrique"],
+"Quem foi o décimo quinto presidente dos estados unidos?": ["4_respostas", 2, "Abraham Lincoln", "James Buchanan", "John Fitzgerald Kennedy", "Franklin Delano Roosevelt"],
+"Qual destes canais publicou o primeiro vídeo no Youtube?": ["4_respostas", 1, "Jawed", "Liam Boland", "Supergameplays123", "Pewdiepie"],
+"Quem é o atual secretário–geral das Nações Unidas?": ["4_respostas", 3, "Antero de Quental", "Louis Pasteur", "António Guterres", "Francisco Sancho"],
+"Em que ano se deu a batalha de Aljubarrota?": ["4_respostas", 4, "1380", "1387", "1389", "1385"],
+"À casa de teu irmão...": ["2_respostas", 2, "vai, mas com razão.", "não vás sem ter razão."],
+"Quem um dos autores do livro 'Ser no mundo'?": ["3_respostas", 3, "João Tavares", "Osório Matias", "André Leonor"],
+"Como se chama o ator que faz de Tony Stark?": ["4_respostas", 1, "Robert Downey Jr.", "Bernardo Mariz", "Anthony Edward", "Chris Evans"],
+"Qual destas é um tipo de cão?": ["3_respostas", 1, "Pug", "Carvalho", "Corneano"],
+"Como se chamava o balão da turma?": ["4_respostas", 3, "Gelatina", "Gaspar", "Jélé", "Agostinho"],
+"Dado a função f, de expressão analítca f(x)=x^2 + 3x - 5, qual das alternativas corresponde à derivada de f/x^3-5?": ["3_respostas", 1, "(–x^4–6x^3+15x^2–10x–15)/((x^3–5)^2)", "5x^3+12", "12"],
+"Qual é a capital do Luxemburgo?": ["4_respostas", 3, "Pétange", "Rússia", "Luxemburgo", "Burger King"]
+}

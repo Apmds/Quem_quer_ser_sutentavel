@@ -1,0 +1,242 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Question_4_answers.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/Questions_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/Fonts/JuanMikes.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.835294, 0.835294, 0.835294, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.639216, 0.639216, 0.639216, 1 )
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.835294, 0.835294, 0.835294, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.639216, 0.639216, 0.639216, 1 )
+border_blend = true
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.835294, 0.835294, 0.835294, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.639216, 0.639216, 0.639216, 1 )
+border_blend = true
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.835294, 0.835294, 0.835294, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.639216, 0.639216, 0.639216, 1 )
+border_blend = true
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 30
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Question_4_answers" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Question" type="Panel" parent="."]
+self_modulate = Color( 0.0352941, 0.67451, 0.87451, 1 )
+margin_left = 80.0
+margin_top = 40.0
+margin_right = 1205.0
+margin_bottom = 250.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Question"]
+margin_left = 170.0
+margin_right = 955.0
+margin_bottom = 210.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Texto da pergunta vai aqui"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Answers" type="Control" parent="."]
+margin_right = 1284.0
+margin_bottom = 722.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer1" type="Panel" parent="Answers"]
+self_modulate = Color( 0.0470588, 0.498039, 0.909804, 1 )
+margin_left = 191.0
+margin_top = 280.0
+margin_right = 1091.0
+margin_bottom = 370.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Answers/Answer1"]
+margin_right = 900.0
+margin_bottom = 90.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Primeira resposta vai aqui"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Answers/Answer1"]
+margin_right = 900.0
+margin_bottom = 90.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer2" type="Panel" parent="Answers"]
+self_modulate = Color( 0.0470588, 0.498039, 0.909804, 1 )
+margin_left = 193.0
+margin_top = 390.0
+margin_right = 1093.0
+margin_bottom = 480.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Answers/Answer2"]
+margin_right = 900.0
+margin_bottom = 90.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Segunda resposta vai aqui"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Answers/Answer2"]
+margin_right = 900.0
+margin_bottom = 90.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer3" type="Panel" parent="Answers"]
+self_modulate = Color( 0.0470588, 0.498039, 0.909804, 1 )
+margin_left = 190.0
+margin_top = 500.0
+margin_right = 1090.0
+margin_bottom = 590.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Answers/Answer3"]
+margin_right = 900.0
+margin_bottom = 90.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Terceira resposta vai aqui"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Answers/Answer3"]
+margin_right = 900.0
+margin_bottom = 90.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer4" type="Panel" parent="Answers"]
+self_modulate = Color( 0.0470588, 0.498039, 0.909804, 1 )
+margin_left = 190.0
+margin_top = 610.0
+margin_right = 1090.0
+margin_bottom = 700.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Answers/Answer4"]
+margin_right = 900.0
+margin_bottom = 90.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Quarta resposta vai aqui"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Answers/Answer4"]
+margin_right = 900.0
+margin_bottom = 90.0
+flat = true
+
+[connection signal="pressed" from="Answers/Answer1/Button" to="." method="_on_Answer1_pressed"]
+[connection signal="pressed" from="Answers/Answer2/Button" to="." method="_on_Answer2_pressed"]
+[connection signal="pressed" from="Answers/Answer3/Button" to="." method="_on_Answer3_pressed"]
+[connection signal="pressed" from="Answers/Answer4/Button" to="." method="_on_Answer4_pressed"]
